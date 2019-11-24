@@ -1,0 +1,4 @@
+CREATE USER 'padmin'@'localhost' IDENTIFIED BY 'root';
+GRANT ALL PRIVILEGES ON *.* TO 'padmin'@'localhost' WITH GRANT OPTION;
+CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+CREATE DATABASE phpmyadmin DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;

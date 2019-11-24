@@ -1,0 +1,11 @@
+Docker technology				: 100
+container with debian:buster	: 100
+ngnix service					: 100
+wordpress service				: 100
+MySql service					: 100
+PhpMyAdmin service				: 100
+service intercommunication		: 100
+SSL protocole					: 100
+index that can be deactivated	: 50
+URL redirection					: 100
+web server with nginx 			: 80
