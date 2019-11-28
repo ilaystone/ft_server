@@ -25,5 +25,5 @@ COPY ./srcs/info.php /var/www/html/info.php
 COPY ./srcs/start.sh /start.sh
 RUN chmod 777 /start.sh
 
-EXPOSE 80
-ENTRYPOINT ["/start.sh"]
+EXPOSE 80 443
+ENTRYPOINT [ "./start.sh" ]
