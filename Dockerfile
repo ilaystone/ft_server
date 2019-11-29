@@ -13,6 +13,8 @@ RUN apt install wget -y && \
 	rm phpMyAdmin-4.9.0.1-all-languages.zip
 RUN ln -s /usr/share/phpmyadmin/ /var/www
 RUN mkdir /usr/share/phpmyadmin/tmp && chmod 777 /usr/share/phpmyadmin/tmp
+RUN mkdir /etc/nginx/ssl && chmod 700 /etc/nginx/ssl
+RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -subj "/" -keyout /etc/nginx/ssl/localssl.key -out /etc/nginx/ssl/localssl.crt
 COPY ./srcs/config.inc.php /usr/share/phpmyadmin/config.inc.php
 ADD ./srcs/nginx.conf /etc/nginx/sites-available/default
 ADD ./srcs/wordpress /var/www/wordpress
@@ -25,5 +27,5 @@ COPY ./srcs/info.php /var/www/html/info.php
 COPY ./srcs/start.sh /start.sh
 RUN chmod 777 /start.sh
 
-EXPOSE 80 443
+EXPOSE 80 443 3306
 ENTRYPOINT [ "./start.sh" ]
