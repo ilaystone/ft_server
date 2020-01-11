@@ -7,7 +7,7 @@ and use it to run a mini web server that provide these services
 - [x] one docker container that runs these services
 
 ## Prerequisit
-* [docker] (https://www.docker.com/get-started)
+[docker](https://www.docker.com/get-started)
 
 ## ressoureces used to realise this project
 * [docker's documentation](https://docs.docker.com/)
